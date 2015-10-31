@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+mypan | lemonbar -d -p -g 2560x20 -f '-*-tamsyn-medium-*-normal-*-20-*-*-*-*-*-*-*' -B '#ff131313' -F '#ff999999'
