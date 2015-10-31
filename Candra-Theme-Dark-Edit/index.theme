@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Candra-Theme-Dark-Edit
+Comment=A clean dark theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Candra-Theme-Dark-Edit
+MetacityTheme=Candra-Theme-Dark-Edit
+IconTheme=gnome
+CursorTheme=DMZ-Black
+ButtonLayout=menu:minimize,maximize,close

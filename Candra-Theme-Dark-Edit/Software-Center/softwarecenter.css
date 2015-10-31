@@ -1,0 +1,231 @@
+@define-color light-aubergine #2A2A2B/*#DED7DB*/;
+@define-color super-light-aubergine #2F2F30/*#F4F1F3*/;
+
+
+#featured-star {
+    border-color: #7D0126;  /* yellow */
+    color: #F0532A;         /* orange */
+}
+
+.grid-lines {
+    border-color: shade (@light-aubergine, 1.025);
+}
+
+#screenshot-preview {
+    border-color: #1f1f1f;
+    color: @theme_fg_color;
+    border-width: 2px;
+    border-radius: 3px;
+}
+
+.backforward-left-button {
+    border-radius: 3px 0 0 3px; 
+}
+
+.backforward-right-button {
+    border-radius: 0 3px 3px 0;
+}
+
+.subtle,
+#subtle-label {
+    -GtkWidget-link-color: #2a76c6;
+    -GtkWidget-visited-link-color: #215d9c;
+    color: shade(@theme_fg_color,0.8); /* non-link text color */
+    text-shadow: 0 -1px 2px rgba(0,0,0,0.15);
+}
+
+.cellrenderer-button {
+    border-radius: 3px;
+}
+
+.cellrenderer-avgrating-label {
+    color: #6a6a6a; /* dark gray */
+}
+
+.cellrenderer-avgrating-label:selected {
+    color: #9d9d9d;
+}
+
+.more-link {
+    -GtkButton-inner-border: 0;
+    -GtkButton-default-border: 0;
+    -GtkButton-default-outside-border: 0;
+    color: #dddddd;
+    background-color: shade (@theme_selected_bg_color, 0.825);
+    border-color: shade (@theme_selected_bg_color, 0.775);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.frame-header-title {
+	color: #bbbbbb;
+    text-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+
+.item-view-separator {
+    border-color: alpha (@light-aubergine, 0.6);
+    border-width: 1px;
+}
+
+.light-aubergine-bg {
+    background-color: @light-aubergine;
+}
+
+.super-light-aubergine-bg {
+    background-color: @super-light-aubergine;
+    border-color: shade (@super-light-aubergine, 0.975)
+}
+
+GtkViewport {
+	color: #bbbbbb;
+	text-shadow: 1px 1px 2px alpha(black, 0.12);
+	background-color: transparent;
+    border-width: 0;
+    padding: 0;
+}
+GtkLabel:selected,
+GtkLabel *:selected
+.view GtkLabel:selected {
+background-color: transparent;
+}
+	
+GtkTreeView {
+    border-style: solid;
+	border-width: 0px 0px 0px 0px;
+	border-top-color:transparent;
+	background-color: @theme_bg_color;
+	background-image: none;
+	
+	color: @theme_fg_color;
+} 
+	
+GtkTreeView:selected {
+	background-color: #373738;
+	background-image: none;
+
+    box-shadow: none;
+
+    color: white;
+}
+
+GtkTreeView:selected:focus {
+	background-color: #373738;
+	background-image: none;
+
+    box-shadow:none;
+
+    color: white;
+}
+
+GtkTreeView:selected {
+	text-shadow: 0 1px 2px alpha(black, 0.18);
+}	
+
+#toolbar-popup {
+    padding: 0;
+}
+
+/**** Progressbar for Treeviews *****/
+/*******this gets messy**************/
+
+
+/* progress component */
+
+GtkTreeView.view.progressbar,
+.progressbar row,
+.progressbar row:selected,
+.progressbar row:selected:focus {
+	border-radius: 2px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    background-color: #004545;
+    color: @theme_selected_fg_color;
+	background-image: none;
+    box-shadow: none;                                                                   						
+}
+GtkTreeView.view.progressbar:selected,
+.progressbar row:selected,
+.progressbar row:selected:focus,
+GtkTreeView .progressbar row:selected,
+GtkTreeView .progressbar row:selected:focus {
+	border-radius: 2px;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    color: @theme_selected_fg_color;
+	background-image: linear-gradient(to left,
+                                      #004545
+                                      );
+    box-shadow: none;  	
+}
+
+.progressbar row:insensitive,
+.progressbar row:insensitive:focus,
+GtkTreeView .progressbar row:insensitive,
+GtkTreeView .progressbar row:insensitive:focus,
+.progressbar row:insensitive:selected:selected,
+.progressbar row:insensitive:selected:selected:focus,
+GtkTreeView .progressbar row:insensitive:selected:selected,
+GtkTreeView .progressbar row:insensitive:selected:selected:focus {
+
+    background-image: linear-gradient(to left,
+                                      @insensitive_fg_color
+                                      );
+    
+    box-shadow: none;                            					
+}
+
+/* TROUGH */
+GtkTreeView.view.trough,
+.trough row,
+GtkTreeView.trough row,
+GtkTreeView .trough row,
+.cell.trough row {
+    border-radius: 0;
+    padding: 0;
+    background-color:#202021;
+	background-image: none;
+	border-image: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #202021;
+	box-shadow: none;                                                              
+}
+
+GtkTreeView .trough row:focus,
+GtkTreeView.trough row:focus,
+GtkTreeView .trough row:selected:selected:selected,/*We must use 'selected' 3x's to overide 'treeview odd/even row' double 'selected' */
+GtkTreeView.trough row:selected:selected:selected,
+GtkTreeView .trough row:selected:focus,
+GtkTreeView.trough row:selected:focus,
+.trough row:focus,
+.trough row:selected:selected,
+.trough row:selected:focus {
+	border-radius: 0;
+    background-image: none;
+    background-color: #202021;
+    border-image: none;
+    border-style: solid;
+	border-width: 1px;
+    border-color: #202021;
+    box-shadow: none;                               
+}
+
+GtkTreeView .trough row:insensitive,
+.trough row:insensitive,
+GtkTreeView .trough row:backdrop,
+.trough row:backdrop,
+GtkTreeView .trough row:insensitive:backdrop,
+.trough row:insensitive:backdrop,
+GtkTreeView .trough row:insensitive:selected:selected:selected,
+.trough row:insensitive:selected:selected:selected:selected {
+	background-image: none;
+    background-color: @insensitive_bg_color;
+    border-image: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: @insensitive_bg_color;
+	box-shadow: none;                                
+}
+
+
